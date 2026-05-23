@@ -1,0 +1,42 @@
+import { Routes, Route } from "react-router-dom";
+import Menu from "./components/Menu";
+import Inicio from "./pages/Inicio";
+
+// Listados de Trida (Monitoreo IA)
+import Modelos from "./pages/Modelos";
+import Alertas from "./pages/Alertas";
+import Logs from "./pages/Logs";
+import Usuarios from "./pages/Usuarios";
+
+// Detalles dinámicos
+import DetalleModelo from "./pages/DetalleModelo";
+import DetalleAlerta from "./pages/DetalleAlerta";
+import DetalleLog from "./pages/DetalleLog";
+import DetalleUsuario from "./pages/DetalleUsuario";
+
+function App() {
+  return (
+    <>
+      <Menu />
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        
+        {/* Rutas de Listados */}
+        <Route path="/modelos" element={<Modelos />} />
+        <Route path="/alertas" element={<Alertas />} />
+        <Route path="/logs" element={<Logs />} />
+        <Route path="/usuarios" element={<Usuarios />} />
+
+        {/* Rutas de Detalles */}
+        <Route path="/modelos/:id" element={<DetalleModelo />} />
+        <Route path="/alertas/:id" element={<DetalleAlerta />} />
+        <Route path="/logs/:id" element={<DetalleLog />} />
+        <Route path="/usuarios/:id" element={<DetalleUsuario />} />
+
+        <Route path="*" element={<h1 style={{ padding: "2rem" }}>Error 404</h1>} />
+      </Routes>
+    </>
+  );
+}
+
+export default App;
