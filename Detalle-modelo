@@ -1,0 +1,13 @@
+import { useParams } from "react-router-dom";
+
+function DetalleModelo() {
+  const { id } = useParams();
+
+  return (
+    <div>
+      <h2>Detalle del Modelo de IA</h2>
+      <p>Estás viendo las métricas y estado del modelo con el ID: {id}</p>
+    </div>
+  );
+}
+export default DetalleModelo;
