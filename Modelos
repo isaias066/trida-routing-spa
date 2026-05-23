@@ -1,0 +1,15 @@
+import { Link } from "react-router-dom";
+
+function Modelos() {
+  return (
+    <div>
+      <h2>Modelos de IA en Monitoreo</h2>
+      <ul>
+        <li><Link to="/modelos/1">Modelo GPT-4 (ID: 1)</Link></li>
+        <li><Link to="/modelos/2">Modelo Llama-3 (ID: 2)</Link></li>
+        <li><Link to="/modelos/3">Modelo Claude (ID: 3)</Link></li>
+      </ul>
+    </div>
+  );
+}
+export default Modelos;
